@@ -32,6 +32,8 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    list-style: none;
+    text-decoration: none;
 }
 html {
     scroll-behavior: smooth;
@@ -57,4 +59,107 @@ body {
     padding-right: 20px;
     margin-left: auto;
     margin-right: auto;
+}
+
+/* SITE HEADER STYLES */
+.site-header {
+    padding: 3rem 0;
+    position: relative;
+    z-index: 100;
+    background-color: var(--white-color);
+}
+.site-header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.site-logo {
+    display: flex;
+}
+.site-logo-img {
+    width: 177px;
+    height: 50px;
+    object-fit: contain;
+}
+.sitenav-list {
+    display: flex;
+}
+.sitenav-item:not(:last-child) {
+    margin-right: 4rem;
+}
+.sitenav-link {
+    color: var(--primary-color);
+    font-size: 1.9rem;
+    line-height: 3rem;
+    letter-spacing: 0.4px;
+}
+.sitenav-link:hover {
+    color: var(--brand-color);
+}
+.burger-btn {
+    display: none;
+}
+.flow-navbar {
+    position: absolute;
+    background-color: var(--white-color);
+    width: 100%;
+    padding: 2rem;
+    text-align: center;
+    top: 16vh;
+    left: 0;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+}
+.burger-btn,
+.flow-navbar__close {
+    padding: 1rem;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+.burger-btn img,
+.flow-navbar__close img {
+    width: 30px;
+    height: 30px;
+}
+.flow-navbar__add {
+    transform: translateY(0%);
+    transition: transform 0.5s ease;
+}
+.flow-navbar__remove {
+    transform: translateY(-100%);
+    transition: transform 0.5s ease;
+}
+.hidden {
+    display: none !important;
+}
+
+
+@media only screen and (max-width: 1200px) {
+
+}
+@media only screen and (max-width: 992px) {
+
+}
+@media only screen and (max-width: 768px) {
+    .sitenav {
+        display: none;
+    }
+    .burger-btn {
+        display: block;
+    }
+    .sitenav-list {
+        flex-direction: column;
+    }
+    .sitenav-item:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 1.5rem;
+    }
+}
+@media only screen and (max-width: 576px) {
+
+}
+@media only screen and (max-width: 410px) {
+
 }
