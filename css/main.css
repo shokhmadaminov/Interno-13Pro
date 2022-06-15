@@ -1,0 +1,60 @@
+/* FONT FACE */
+@font-face {
+    font-family: 'Jost';
+    src: url('../fonts/Jost-Regular.woff2') format('woff2'),
+        url('../fonts/Jost-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'DM Serif Display';
+    src: url('../fonts/DMSerifDisplay-Regular.woff2') format('woff2'),
+        url('../fonts/DMSerifDisplay-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* CUSTOM PROPS */
+:root {
+    --title-font: 'DM Serif Display', "Georgia", serif;
+    --text-font: 'Jost', "Arial", sans-serif;
+    --primary-color: #292f36;
+    --brand-color: #cda274;
+    --text-color: #4d5053;
+    --white-color: #fff;
+    --black-color: #000;
+}
+
+/* GLOBAL STYLES */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    scroll-behavior: smooth;
+    height: 100%;
+    font-size: 62.5%;
+}
+body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: var(--text-font);
+    font-size: 2.2rem;
+    line-height: 3.3rem;
+    letter-spacing: 0.22px;
+    color: var(--text-color);
+    background-color: var(--white-color);
+}
+/* CONTAINER STYLES */
+.container {
+    width: 100%;
+    max-width: 1240px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
